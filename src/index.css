@@ -43,5 +43,9 @@ code {
     monospace;
 }
 
+:root {
+  --transition: all 400ms ease;
+}
+
 
 /* font-family: 'Montserrat', sans-serif; */

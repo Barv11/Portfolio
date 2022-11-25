@@ -1,0 +1,63 @@
+.container {
+    position: fixed;
+    bottom: 2em;left: 50%;
+    transform: translateX(-50%);
+  margin: 1em;
+  outline: 1px solid wheat;
+  padding: 0.7em 1.7em;
+  background-color: #0000004b;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 100px;
+  display: flex;
+  width: 400px;
+  min-width: 300px;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  font-size: 1.1rem;
+  color: #ffffff;
+  padding: 1em;
+  border-radius: 50%;
+  transition: var(--transition);
+  -o-transition: var(--transition);
+  -moz-transition: var(--transition);
+  -webkit-transition: var(--transition);
+}
+
+.link > svg {
+  fill: #808080;
+  -webkit-text-fill-color: #808080;
+}
+
+.link:hover {
+  background-color: #252525;
+}
+
+.link:hover > svg {
+  fill: white;
+  -webkit-text-fill-color: #ffffff;
+}
+
+.active {
+  background-color: lightseagreen;
+}
+
+.active:hover {
+  background-color: lightseagreen;
+}
+
+.active > svg {
+  fill: #340034;
+  -webkit-text-fill-color: #340034;
+}
+
+.active:hover > svg {
+  fill: #340034;
+}

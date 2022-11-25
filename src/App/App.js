@@ -1,10 +1,10 @@
-
+import Home from "../Components/Home/Home";
 
 function App() {
   return (
-    <div>
-      Portafolio
-    </div>
+    <>
+      <Home/>
+    </>
   );
 }
 
