@@ -1,3 +1,172 @@
 .container {
-    height: 100vh;
+  height: 100vh;
+  background: var(--backgroundPage);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.container > h1 {
+  font-size: 3.5rem;
+  font-weight: 200;
+  font-family: var(--fontGlobal);
+}
+
+.contact {
+  padding: 2em 0;
+  background-color: #774040;
+  width: 70%;
+  height: 60%;
+  border-radius: 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 2em;
+}
+
+.name {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 15%;
+}
+
+.name:nth-child(3) {
+  height: 25%;
+}
+
+.name::before {
+  position: absolute;
+  content: "";
+  width: 62%;
+  height: 1px;
+  /* top: -0.5rem; */
+  bottom: 0;
+  /* left: 0; */
+  background-color: #700d1e;
+  filter: drop-shadow(0 0 3px #700d1e) drop-shadow(0 0 3px #700d1e);
+  animation: size 5s infinite;
+}
+
+@keyframes size {
+  0% {
+    opacity: .1;
+    width: 0;
+  }
+
+  50% {
+    opacity: .8;
+    width: 62%;
+  }
+
+  100% {
+    opacity: .8;
+    width: 0;
+  }
+}
+
+.name > svg {
+  position: absolute;
+  fill: #000000;
+  right: 81%;
+  top: calc((100% - 24px) / 2);
+  transition: fill 0.5s, filter 0.5s;
+}
+
+.name > textarea,
+.name > input {
+  width: 60%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 0 2em;
+  font-family: var(--fontGlobal);
+  font-weight: 400;
+  font-size: 1.3rem;
+  background-color: #ffffff;
+  border: none;
+  outline: none;
+}
+
+.name > textarea {
+  resize: none;
+  font-size: 1rem;
+}
+
+
+.name > input:valid ~ label,
+.name > input:focus ~ label {
+  top: -1rem;
+}
+
+.name > textarea:valid ~ label,
+.name > textarea:focus ~ label {
+  top: -1rem;
+}
+
+.name > input:valid ~ svg,
+.name > input:focus ~ svg {
+  fill: #4b1414;
+  filter: drop-shadow(0 0 2px black) drop-shadow(0 0 1px rgba(0, 0, 0, 0.514));
+}
+
+.name > label {
+  left: 40.5%;
+  top: calc((100% - 1rem) / 2);
+  background-color: #ffffff;
+  border-radius: 8px 8px 0 0;
+  padding: 0 1em;
+  font-size: 1rem;
+  font-weight: 400;
+  position: absolute;
+  font-family: var(--fontGlobal);
+  transition: top 0.2s;
+  color: #000000;
+}
+
+.name:nth-child(2) > label {
+  left: 45.5%;
+}
+
+.name:nth-child(3) > label {
+  left: 45%;
+  top: 20px;
+}
+.name:nth-child(4) > label {
+  left: 45%;
+  top: 20px;
+}
+
+.contact > button {
+  cursor: pointer;
+  font-family: var(--fontGlobal);
+  width: 20%;
+  padding: 1em 0;
+  border-radius: 10px;
+  font-size: .8rem;
+  font-weight: 600;
+  outline: none;
+  border: none
+}
+
+.error {
+  font-family: var(--fontGlobal);
+  font-weight: 500;
+  outline: 1px solid #5a2626;
+  padding: .4em;
+  color: #410000;
+  font-size: 1.1rem;
+}
+
+.success {
+  width: 80%;
+  font-family: var(--fontGlobal);
+  letter-spacing: 2px;
+  font-weight: 300;
+  padding: .4em;
+  color: #ffffff;
+  font-size: 1.5rem;
 }

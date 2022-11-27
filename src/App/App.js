@@ -1,4 +1,4 @@
-import About from "../Components/About/About";
+// import About from "../Components/About/About";
 import Contact from "../Components/Contact/Contact";
 import Profile from "../Components/Profile/Profile";
 import Navbar from "../Components/Navbar/Navbar";
@@ -13,7 +13,7 @@ function App() {
       <Profile />
       <Projects />
       <Technologies />
-      <About />
+      {/* <About /> */}
       <Contact />
     </div>
   );

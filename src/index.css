@@ -45,7 +45,10 @@ code {
 
 :root {
   --transition: all 400ms ease;
+  --backgroundPage: #9b5959;
+  --fontGlobal: 'Montserrat', sans-serif; 
 }
 
-
-/* font-family: 'Montserrat', sans-serif; */
+* {
+  /* outline: 1px solid saddlebrown; */
+}

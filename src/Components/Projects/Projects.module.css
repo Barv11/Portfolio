@@ -1,3 +1,6 @@
 .container {
     height: 100vh;
+    background: var(--backgroundPage);
+    display: flex;justify-content: center;align-items: center;flex-flow: row wrap;
+    gap: 1em;
 }

@@ -3,7 +3,7 @@ import {
   UilEstate,
   UilSuitcase,
   UilVerticalAlignBottom,
-  UilUser,
+  // UilUser,
   UilMessage,
 } from "@iconscout/react-unicons";
 import s from "./Navbar.module.css";
@@ -14,9 +14,9 @@ export default function Navbar() {
   return (
     <nav className={s.container}>
       <a
-        href="#home"
-        onClick={() => setLink("home")}
-        className={`${s.link} ${link === "home" ? s.active : null}`}
+        href="#profile"
+        onClick={() => setLink("profile")}
+        className={`${s.link} ${link === "profile" ? s.active : null}`}
       >
         <UilEstate />
       </a>
@@ -34,13 +34,13 @@ export default function Navbar() {
       >
         <UilVerticalAlignBottom />
       </a>
-      <a
+      {/* <a
         href="#about"
         onClick={() => setLink("about")}
         className={`${s.link} ${link === "about" ? s.active : null}`}
       >
         <UilUser />
-      </a>
+      </a> */}
       <a
         href="#contact"
         onClick={() => setLink("contact")}

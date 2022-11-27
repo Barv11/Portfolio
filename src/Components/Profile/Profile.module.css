@@ -1,3 +1,84 @@
 .container {
-    height: 100vh;
+  font-family: var(--fontGlobal);
+  height: 100vh;
+  background: linear-gradient(
+    0deg,
+    var(--backgroundPage) 0%,
+    rgba(250, 245, 245, 1) 63%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.first {
+  flex-basis: 20%;
+  display: flex;justify-content: center;
+}
+
+.icons {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1.5em;
+}
+.icons a > svg {
+  padding: 3px;
+  fill: #383838;
+  width: 30px;
+  height: 30px;
+}
+
+.icons a:hover > svg{
+  padding: 3px;
+  background-color: #00000077;
+  fill: aliceblue;
+  border-radius: 7px;
+}
+
+a[href="#contact"],
+a[download="Bryan Ramos Vargas CV"] {
+  color: #000000;
+  font-family: var(--fontGlobal);
+  text-decoration: none;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.second {
+  height: 100%;
+  flex-basis: 80%;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.me {
+  color: #000000;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  gap: 1em;
+}
+
+.me > h2 {
+  font-size: 3rem;
+  font-weight: 500;
+}
+
+.me > p {
+  font-size: 2rem;
+  letter-spacing: .4em;
+  font-weight: 300;
+}
+
+.image {
+  width: 520px;
+  height: 400px;
+  object-fit: contain;
+  overflow: hidden;
 }

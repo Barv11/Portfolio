@@ -1,13 +1,14 @@
 .container {
-    position: fixed;
-    bottom: 2em;left: 50%;
-    transform: translateX(-50%);
+  position: fixed;
+  z-index: 999;
+  bottom: 1em;
+  left: 50%;
+  transform: translateX(-50%);
   margin: 1em;
-  outline: 1px solid wheat;
-  padding: 0.7em 1.7em;
+  padding: .4em 5em;
   background-color: #0000004b;
-  backdrop-filter: blur(15px);
-  -webkit-backdrop-filter: blur(15px);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border-radius: 100px;
   display: flex;
   width: 400px;
@@ -20,10 +21,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: transparent;
+  background-color: #00000023;
   font-size: 1.1rem;
   color: #ffffff;
-  padding: 1em;
+  padding: .5em;
   border-radius: 50%;
   transition: var(--transition);
   -o-transition: var(--transition);
@@ -32,12 +33,14 @@
 }
 
 .link > svg {
-  fill: #808080;
-  -webkit-text-fill-color: #808080;
+  width: 20px;
+  height: 20px;
+  fill: #c7c7c7;
+  -webkit-text-fill-color: #c7c7c7;
 }
 
 .link:hover {
-  background-color: #252525;
+  background-color: #1d1d1d;
 }
 
 .link:hover > svg {
@@ -46,18 +49,19 @@
 }
 
 .active {
-  background-color: lightseagreen;
+  background-color: #4700009a;
 }
 
 .active:hover {
-  background-color: lightseagreen;
+  background-color: #4700009a;
 }
 
 .active > svg {
-  fill: #340034;
-  -webkit-text-fill-color: #340034;
+  fill: #ffffff;
+  -webkit-text-fill-color: #ffffff;
 }
 
 .active:hover > svg {
-  fill: #340034;
+  fill: #ffffff;
+  -webkit-text-fill-color: #ffffff;
 }
