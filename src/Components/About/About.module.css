@@ -10,7 +10,11 @@
 }
 
 .header {
-    display: flex;justify-content: center;align-items: center;flex-flow: column nowrap;gap: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 2em;
 }
 
 .header > h1 {
@@ -19,54 +23,108 @@
 }
 
 .header > span {
-    font-size: 2.7rem;
-    font-weight: 100;
-    display: flex;align-items: center;
+  font-size: 2.7rem;
+  font-weight: 100;
+  display: flex;
+  align-items: center;
 }
 
 .header > span > img {
-    width: 36px;
-    height: 36px;
-    margin: 0 .2em;
+  width: 36px;
+  height: 36px;
+  margin: 0 0.2em;
 }
 
 .container > p {
-    line-height: 1.5em;
-    width: 80%;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: 300;
-
+  line-height: 1.5em;
+  width: 80%;
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: 300;
 }
 
 .container > p > b {
-    color: rgb(93, 255, 255);
-    font-weight: 500;
+  color: rgb(93, 255, 255);
+  font-weight: 500;
 }
 
 .container > p > b:last-child {
-    color: rgb(33, 214, 88);
-    font-weight: 500;
+  color: rgb(33, 214, 88);
+  font-weight: 500;
 }
 
-.talk > button  {
-    cursor: pointer;
-    font-family: var(--fontGlobal);
-    margin-bottom: 3em;
-    background-color: #00ff55;
-    color: #2e2e2e;
-    border: none;
-    font-weight: bold;
-    font-size: 1.2rem;
-    outline: none;
-    padding: 1em 2em;
-    border-radius: 10px;
+.talk > button {
+  cursor: pointer;
+  font-family: var(--fontGlobal);
+  margin-bottom: 3em;
+  background-color: #00ff55;
+  color: #2e2e2e;
+  border: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  outline: none;
+  padding: 1em 2em;
+  border-radius: 10px;
 }
 
 .talk > button:hover {
-    color: #00ff55;
-    text-shadow: 0 0 5px #929292;
-    outline: 2px solid #00ff55;
-    box-shadow: 0 0 10px #00ff55;
-    background-color: transparent;
+  color: #00ff55;
+  text-shadow: 0 0 5px #929292;
+  outline: 2px solid #00ff55;
+  box-shadow: 0 0 10px #00ff55;
+  background-color: transparent;
+}
+
+@media only screen and (max-width: 900px) {
+  .header > h1 {
+    font-size: 3rem;
+  }
+
+  .header > span {
+    font-size: 2.2rem;
+  }
+
+  .header > span > img {
+    width: 31px;
+    height: 31px;
+  }
+
+  .container > p {
+    line-height: 1.3em;
+    font-size: 1.1rem;
+  }
+
+  .talk > button {
+    font-size: 1rem;
+    padding: 0.8em 2em;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    gap: 1em;
+  }
+  .header {
+    gap: 1em;
+  }
+
+  .header > h1 {
+    font-size: 2.6rem;
+  }
+
+  .header > span {
+    font-size: 1.8rem;
+  }
+
+  .talk > button {
+    font-size: 1rem;
+    padding: 0.8em 2em;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .container > p {
+    line-height: 1.3em;
+    font-size: 0.85rem;
+  }
 }
