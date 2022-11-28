@@ -64,9 +64,28 @@
   .contimg {
     padding: 0.5em;
     height: 30px;
+    border-radius: 10px;
   }
   .container > span {
     padding: 0.1em 0;
     font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .container {
+    margin: .4em;
+  }
+  .contimg > img {
+    width: 18px;
+  }
+  .contimg {
+    padding: 0.4em;
+    height: 18px;
+    border-radius: 5px;
+  }
+  .container > span {
+    padding: 0.1em 0;
+    font-size: 0.8rem;
   }
 }

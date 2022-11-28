@@ -38,6 +38,9 @@
 .name:nth-child(3) {
   height: 25%;
 }
+.name:nth-child(4) {
+  height: 25%;
+}
 
 .name::before {
   position: absolute;
@@ -54,17 +57,17 @@
 
 @keyframes size {
   0% {
-    opacity: .1;
+    opacity: 0.1;
     width: 0;
   }
 
   50% {
-    opacity: .8;
+    opacity: 0.8;
     width: 62%;
   }
 
   100% {
-    opacity: .8;
+    opacity: 0.8;
     width: 0;
   }
 }
@@ -96,7 +99,6 @@
   font-size: 1rem;
 }
 
-
 .name > input:valid ~ label,
 .name > input:focus ~ label {
   top: -10%;
@@ -117,6 +119,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  white-space: nowrap;
   background-color: #ffffff;
   border-radius: 8px 8px 0 0;
   padding: 0 1em;
@@ -134,17 +137,17 @@
   width: 20%;
   padding: 1em 0;
   border-radius: 10px;
-  font-size: .8rem;
+  font-size: 0.8rem;
   font-weight: 600;
   outline: none;
-  border: none
+  border: none;
 }
 
 .error {
   font-family: var(--fontGlobal);
   font-weight: 500;
   outline: 1px solid #5a2626;
-  padding: .4em;
+  padding: 0.4em;
   color: #410000;
   font-size: 1.1rem;
 }
@@ -154,7 +157,55 @@
   font-family: var(--fontGlobal);
   letter-spacing: 2px;
   font-weight: 300;
-  padding: .4em;
+  padding: 0.4em;
   color: #ffffff;
   font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .contact {
+    width: 85%;
+    height: 60%;
+  }
+  .name {
+    height: 10%;
+  }
+
+  .name:nth-child(3) {
+    height: 25%;
+  }
+  .name:nth-child(4) {
+    height: 25%;
+  }
+  .container > h1 {
+    font-size: 2.7rem;
+  }
+  .name > textarea,
+  .name > input {
+    padding: 0 2em;
+    font-size: 1.1rem;
+  }
+  .name > textarea {
+    font-size: 1rem;
+  }
+  .name > label {
+    padding: 0 1em;
+    font-size: 0.9rem;
+  }
+
+  .contact > button {
+    width: 40%;
+    padding: .5em 0;
+    font-size: 0.8rem;
+  }
+
+  .error {
+    padding: 0.4em;
+    font-size: 0.9rem;
+  }
+
+  .success {
+    padding: 0.4em;
+    font-size: 1.2rem;
+  }
 }

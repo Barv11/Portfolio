@@ -44,11 +44,11 @@
         font-size: 1rem;
         padding: .3em;
     } 
-    /* .container {
-        flex-flow: row nowrap;
+}
 
-    } */
-    /* .skill {
-        flex-flow: column wrap;
-    } */
+@media only screen and (max-width: 450px) {
+    .skill > h1 {
+        font-size: .8rem;
+        padding: .3em;
+    } 
 }
