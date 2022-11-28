@@ -18,8 +18,8 @@ export default function Projects() {
       img: pokeapp,
       name: "PokeApp",
       info: [
-        "- Esta es una página que consume datos de una API externa, además de una base de datos propia. Es posible filtrar Pokemones por origen y ordenar por nombre o fuerza.",
-        "- Puede ver detalles y crear Pokemones que se añadirán a la base de datos.",
+        "- Esta es una página que consume datos de una API externa, además de una base de datos propia. Es posible filtrar Pokemones por origen, ordenar por nombre o fuerza, ver detalles y agregar Pokemones a la base de datos.",
+        "- Tecnologías usadas: JavaScript, CSS, HTML, NodeJs, Express, React, Redux, Sequelize, Morgan",
       ],
       link: "https://proyectpokemonbarv.vercel.app/",
     },
@@ -35,10 +35,11 @@ export default function Projects() {
   ];
 
   return (
-    <div id="projects" className={s.container}>
+    <section id="projects" className={s.container}>
       {proyect.map((el) => (
-        <CardProyect proyect={el} key={el.name}/>
+        <CardProyect proyect={el} key={el.name} />
       ))}
-    </div>
+      {/* <CardProyect proyect={proyect[0]}/> */}
+    </section>
   );
 }

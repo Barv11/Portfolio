@@ -1,6 +1,28 @@
 .container {
-    height: 100vh;
-    background: var(--backgroundPage);
-    display: flex;justify-content: center;align-items: center;flex-flow: row wrap;
-    gap: 1em;
+  height: 100vh;
+  background: var(--backgroundPage);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-flow: row wrap;
+  gap: 1em;
+}
+
+@media only screen and (max-width: 675px) {
+  .container {
+    flex-flow: column nowrap;
+  }
+}
+
+@media only screen and (min-height: 850px) {
+  .container {
+    gap: 3em;
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  .container {
+    gap: 5em;
+  }
 }

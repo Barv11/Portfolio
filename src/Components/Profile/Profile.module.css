@@ -9,12 +9,14 @@
   );
   display: flex;
   justify-content: space-between;
+  flex-flow: row nowrap;
   align-items: center;
 }
 
 .first {
   flex-basis: 20%;
-  display: flex;justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 
 .icons {
@@ -30,7 +32,7 @@
   height: 30px;
 }
 
-.icons a:hover > svg{
+.icons a:hover > svg {
   padding: 3px;
   background-color: #00000077;
   fill: aliceblue;
@@ -51,8 +53,9 @@ a[download="Bryan Ramos Vargas CV"] {
   height: 100%;
   flex-basis: 80%;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   align-items: center;
+  align-content: center;
   justify-content: center;
   gap: 1em;
 }
@@ -66,14 +69,33 @@ a[download="Bryan Ramos Vargas CV"] {
 }
 
 .me > h2 {
+  opacity: 0;
   font-size: 3rem;
   font-weight: 500;
+  white-space: nowrap;
+  animation: move 1s ease-in-out 1s;
+  animation-fill-mode: forwards;
 }
 
 .me > p {
+  opacity: 0;
   font-size: 2rem;
-  letter-spacing: .2em;
+  letter-spacing: 0.2em;
   font-weight: 300;
+  white-space: nowrap;
+  animation: move 1s ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0;
+    transform: translateY(-300px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .image {
@@ -81,4 +103,80 @@ a[download="Bryan Ramos Vargas CV"] {
   height: 400px;
   object-fit: contain;
   overflow: hidden;
+}
+
+@media only screen and (min-height: 720px) {
+  .second {
+    gap: 2em;
+  }
+
+  .icons {
+    gap: 5em;
+  }
+}
+
+@media only screen and (min-height: 1000px) {
+  .second {
+    gap: 9em;
+  }
+
+  .icons {
+    gap: 9em;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .me > h2 {
+    font-size: 2rem;
+  }
+
+  .me > p {
+    font-size: 1rem;
+  }
+
+  .image {
+    width: 420px;
+    height: 300px;
+  }
+
+  .image > img {
+    width: 470px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    flex-flow: column-reverse nowrap;
+  }
+  .icons {
+    flex-flow: row-reverse nowrap;
+    gap: 2em;
+  }
+  .first {
+    flex-basis: 30%;
+  }
+  .second {
+    flex-basis: 70%;
+  }
+  .me > h2 {
+    font-size: 1.3rem;
+  }
+
+  .me > p {
+    font-size: 0.8rem;
+  }
+
+  .image {
+    width: 250px;
+    height: 180px;
+  }
+
+  .image > img {
+    width: 290px;
+  }
+
+  a[href="#contact"],
+  a[download="Bryan Ramos Vargas CV"] {
+    font-size: 1rem;
+  }
 }

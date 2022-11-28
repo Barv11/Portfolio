@@ -1,7 +1,5 @@
 .container {
   position: relative;
-  /* width: 800px;
-    height: 400px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,8 +7,7 @@
 }
 
 .proyectimg {
-  width: 600px;
-  height: 267px;
+  width: 500px;
   object-fit: contain;
 }
 
@@ -30,40 +27,103 @@
 }
 
 .submodal {
-    width: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-flow: column nowrap;
-    gap: 1em;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  gap: 1em;
 }
 
 .submodal > span {
   text-transform: uppercase;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   font-weight: 600;
 }
 
 .submodal > p {
   text-align: center;
-  font-size: .9rem;
+  font-size: 0.7rem;
   font-weight: 300;
 }
 
 .container:hover > .modal {
   width: 900px;
   height: 700px;
-  top: -220px;
-  left: -150px;
+  /* top: -240px;
+  left: -200px; */
+  /* top: 50%;
+  transform: translate(0, -50%); */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .submodal > a {
-    background-color: rgba(0, 0, 0, 0.733);
-    font-weight: 600;
-    padding: .5em;
-    display: flex;
-    gap: .5em;
-    align-items: center;
-    color: #660e29;
+  background-color: rgba(0, 0, 0, 0.733);
+  font-weight: 600;
+  padding: 0.5em;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  color: #660e29;
 }
+
+@media only screen and (max-width: 1030px) {
+  .proyectimg {
+    width: 400px;
+  }
+  .submodal > span {
+    font-size: 1.1rem;
+  }
+  .submodal > p {
+    font-size: 0.6rem;
+  }
+  .submodal {
+    width: 40%;
+  }
+}
+
+@media only screen and (max-width: 830px) {
+  .proyectimg {
+    width: 300px;
+  }
+  .submodal > span {
+    font-size: 1rem;
+  }
+  .submodal > p {
+    font-size: 0.5rem;
+  }
+  .submodal {
+    width: 30%;
+    gap: 0.6em;
+  }
+  .submodal > a {
+    padding: 0.2em 0.4em;
+    gap: 0.5em;
+  }
+}
+
+@media only screen and (max-width: 675px) {
+  .proyectimg {
+    width: 300px;
+  }
+  .submodal > span {
+    font-size: 1rem;
+  }
+  .submodal > p {
+    font-size: 0.5rem;
+  }
+  .submodal {
+    width: 30%;
+    gap: 0.6em;
+  }
+  .submodal > a {
+    padding: 0.2em 0.4em;
+    gap: 0.5em;
+  }
+}
+/* 
+@media only screen and (max-height: 850px) {
+} */

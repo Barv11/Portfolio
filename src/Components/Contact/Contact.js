@@ -9,7 +9,7 @@ export default function Contact() {
   return (
     <div id="contact" className={s.container}>
       <h1>Contáctame</h1>
-      <form className={s.contact} onSubmit={handleSubmit}>
+      <form autoComplete="off" className={s.contact} onSubmit={handleSubmit}>
         <div className={s.name}>
           <input type="text" name="name" id="name" required />
           <UilUsersAlt />

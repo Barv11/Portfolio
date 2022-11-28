@@ -38,37 +38,37 @@ export default function Technologies() {
 
   const versionControl = [{ img: git, name: "Git" }];
   return (
-    <div id="technologies" className={s.container}>
+    <section id="technologies" className={s.container}>
       <div className={s.skill}>
-        <h1>Languages</h1>
+        <h1>Languages {'⇒'}</h1>
         {language.map((el) => (
           <CardTech key={el.name} tech={el} />
         ))}
       </div>
       <div className={s.skill}>
-        <h1>Database</h1>
+        <h1>Database {'⇒'}</h1>
         {database.map((el) => (
           <CardTech key={el.name} tech={el} />
         ))}
       </div>
       <div className={s.skill}>
-        <h1>Back-end</h1>
+        <h1>Back-end {'⇒'}</h1>
         {back.map((el) => (
           <CardTech key={el.name} tech={el} />
         ))}
       </div>
       <div className={s.skill}>
-        <h1>Front-end</h1>
+        <h1>Front-end {'⇒'}</h1>
         {front.map((el) => (
           <CardTech key={el.name} tech={el} />
         ))}
       </div>
       <div className={s.skill}>
-        <h1>Version Control</h1>
+        <h1>Version Control {'⇒'}</h1>
         {versionControl.map((el) => (
           <CardTech key={el.name} tech={el} />
         ))}
       </div>
-    </div>
+    </section>
   );
 }

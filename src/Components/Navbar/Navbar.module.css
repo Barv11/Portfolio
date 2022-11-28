@@ -4,27 +4,26 @@
   bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
-  margin: 1em;
   padding: .4em 5em;
   background-color: #0000004b;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
   border-radius: 100px;
+  width: 40%;
   display: flex;
-  width: 400px;
-  min-width: 300px;
   flex-flow: row nowrap;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 10%;
 }
 
 .link {
   display: flex;
+  width: 30px;
+  height: 30px;
   justify-content: center;
   align-items: center;
   background-color: #00000023;
-  font-size: 1.1rem;
-  color: #ffffff;
-  padding: .5em;
+  /* padding: .5em; */
   border-radius: 50%;
   transition: var(--transition);
   -o-transition: var(--transition);
@@ -48,19 +47,12 @@
   -webkit-text-fill-color: #ffffff;
 }
 
-.active {
-  background-color: #4700009a;
-}
-
+.active,
 .active:hover {
   background-color: #4700009a;
 }
 
-.active > svg {
-  fill: #ffffff;
-  -webkit-text-fill-color: #ffffff;
-}
-
+.active > svg,
 .active:hover > svg {
   fill: #ffffff;
   -webkit-text-fill-color: #ffffff;

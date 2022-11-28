@@ -5,7 +5,7 @@ import {
   UilFileDownloadAlt,
   // UilWhatsapp,
 } from "@iconscout/react-unicons";
-import CV from "../../assets/CV/Bryan CV.pdf";
+// import CV from "../../assets/CV/Bryan CV.pdf";
 import logo from "./../../assets/desing.png";
 import s from "./Profile.module.css";
 
@@ -14,13 +14,15 @@ export default function Profile() {
     <header id="profile" className={s.container}>
       <div className={s.first}>
         <div className={s.icons}>
-          <a href="https://github.com/Barv11" target="BLANK">
+          {/* https://github.com/Barv11 target="BLANK"*/}
+          <a href="">
             <UilGithub />
           </a>
           {/* <a href="https://wa.link/6u9ttr" target="BLANK">
             <UilWhatsapp />
           </a> */}
-          <a href="https://www.linkedin.com/in/barv11/" target="BLANK">
+          {/* https://www.linkedin.com/in/barv11/ target="BLANK"*/}
+          <a href="">
             <UilLinkedin />
           </a>
           {/* <a download="Bryan Ramos Vargas CV" href={CV}>

@@ -1,5 +1,5 @@
 .container {
     height: 100vh;
     background: var(--backgroundPage);
-
+    display: flex;justify-content: center;align-items: center;
 }

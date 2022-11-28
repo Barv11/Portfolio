@@ -1,42 +1,72 @@
 .container {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(128, 128, 128, 0.384);
-    backdrop-filter: blur(5px);
-    padding: .5em;
-    border-radius: 15px;
-    gap: .5em;
-    margin: .5em;
-    transform: scale(1);
-    transition: transform .2s;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(128, 128, 128, 0.384);
+  backdrop-filter: blur(5px);
+  padding: 0.5em;
+  border-radius: 15px;
+  gap: 0.5em;
+  margin: 0.5em;
+  transform: scale(1);
+  transition: transform 0.2s;
 }
 
 .contimg {
-    background-color: #f5f5f5;
-    border-radius: 15px;
-    object-fit: contain;
-    padding: .8em;
-    height: 70px;
-    display: flex;justify-content: center;align-items: center;
+  background-color: #f5f5f5;
+  border-radius: 15px;
+  object-fit: contain;
+  padding: 0.8em;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .contimg > img {
-    width: 70px;
-    filter: drop-shadow(0 0 5px #000000);
+  width: 70px;
+  filter: drop-shadow(0 0 5px #000000);
 }
 
 .container > span {
-    filter: drop-shadow(0 0 5px #000000);
-    font-family: var(--fontGlobal);
-    padding: .5em 0;
-    font-weight: 400;
-    letter-spacing: 1px;
-    color: #000000;
-    font-size: 1.2rem;
+  filter: drop-shadow(0 0 5px #000000);
+  font-family: var(--fontGlobal);
+  padding: 0.5em 0;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #000000;
+  font-size: 1.2rem;
 }
 
-.container:hover{
-    transform: scale(1.1);
+.container:hover {
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 1250px) {
+  .contimg > img {
+    width: 50px;
+  }
+  .contimg {
+    padding: 0.8em;
+    height: 50px;
+  }
+  .container > span {
+    padding: 0.3em 0;
+    font-size: 1.15rem;
+  }
+}
+
+@media only screen and (max-width: 720px) {
+  .contimg > img {
+    width: 30px;
+  }
+  .contimg {
+    padding: 0.5em;
+    height: 30px;
+  }
+  .container > span {
+    padding: 0.1em 0;
+    font-size: 1rem;
+  }
 }
