@@ -4,7 +4,7 @@
   bottom: 1em;
   left: 50%;
   transform: translateX(-50%);
-  padding: .4em 5em;
+  padding: 0.4em 5em;
   background-color: #0000004b;
   backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(2px);
@@ -18,8 +18,8 @@
 
 .link {
   display: flex;
-  min-width: 40px;
-  min-height: 40px;
+  min-width: 50px;
+  min-height: 50px;
   justify-content: center;
   align-items: center;
   background-color: #00000023;
@@ -56,4 +56,18 @@
 .active:hover > svg {
   fill: #ffffff;
   -webkit-text-fill-color: #ffffff;
+}
+
+@media only screen and (min-height: 900px) {
+  .container {
+    width: 60%;
+  }
+  .link {
+    min-width: 100px;
+    min-height: 100px;
+  }
+  .link > svg {
+    width: 60px;
+    height: 60px;
+  }
 }
