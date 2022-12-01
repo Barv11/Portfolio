@@ -1,9 +1,14 @@
-import React from "react";
-import CardProyect from "./CardProyect/CardProyect";
+import React, { useState } from "react";
 import s from "./Projects.module.css";
-import { gamertech, pokeapp, appnotes } from "../../assets/proyects";
+import CardProyect from "./CardProyect/CardProyect";
+import { gamertech, pokeapp, appnotes, weatherapp } from "../../assets/proyects";
+import {
+  UilArrowLeft ,
+  UilArrowRight ,
+} from "@iconscout/react-unicons";
 
 export default function Projects() {
+  const [position, setPosition] = useState(0);
   const proyect = [
     {
       img: gamertech,
@@ -32,14 +37,39 @@ export default function Projects() {
       ],
       link: "https://app-notes-three.vercel.app/",
     },
+    {
+      img: weatherapp,
+      name: "WeatherApp",
+      info: [
+        "Web SPA donde puedes buscar ciudades, paises o distritos consumidos por una API.",
+        "Ver detalles de cada lugar y eliminar, los datos son guardados en el Local Storage",
+        "Tecnologías: React, Local Storage.",
+      ],
+      link: "https://weather-app-barv11.vercel.app/",
+    },
   ];
+
+  const onClickPrev = () => {
+    if (position === 0) {
+      setPosition(proyect.length - 1);
+    } else {
+      setPosition((prev) => prev - 1);
+    }
+  };
+
+  const onClickNext = () => {
+    if (position === proyect.length - 1) {
+      setPosition(0);
+    } else {
+      setPosition((prev) => prev + 1);
+    }
+  };
 
   return (
     <section id="projects" className={s.container}>
-      {proyect.map((el) => (
-        <CardProyect proyect={el} key={el.name} />
-      ))}
-      {/* <CardProyect proyect={proyect[0]}/> */}
+      <UilArrowLeft  onClick={onClickPrev} />
+      <CardProyect proyect={proyect[position]} key={proyect[position].name} />
+      <UilArrowRight  onClick={onClickNext} />
     </section>
   );
 }

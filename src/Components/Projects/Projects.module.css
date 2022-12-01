@@ -1,28 +1,64 @@
 .container {
+  position: relative;
   height: 100vh;
   background: var(--backgroundPage);
   display: flex;
   justify-content: center;
   align-items: center;
-  align-content: center;
-  flex-flow: row wrap;
   gap: 1em;
 }
 
-@media only screen and (max-width: 675px) {
-  .container {
-    flex-flow: column nowrap;
+.container > div {
+  flex-basis: 70%;
+}
+
+.container > svg {
+  position: absolute;
+  cursor: pointer;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  fill: var(--backgroundPage);
+  stroke: var(--backgroundPage);
+}
+
+.container > svg:nth-of-type(1) {
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.container > svg:nth-of-type(2) {
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+}
+
+@media only screen and (max-width: 650px) {
+  .container > div {
+    flex-basis: 90%;
+  }
+
+  .container > svg:nth-of-type(1) {
+    top: 80%;
+    left: 40%;
+  }
+
+  .container > svg:nth-of-type(2) {
+    top: 80%;
+    left: 60%;
   }
 }
 
-@media only screen and (min-height: 850px) {
-  .container {
-    gap: 3em;
+@media only screen and (max-width: 450px) {
+  .container > svg:nth-of-type(1) {
+    top: 70%;
+    left: 40%;
   }
-}
 
-@media only screen and (min-height: 1000px) {
-  .container {
-    gap: 5em;
+  .container > svg:nth-of-type(2) {
+    top: 70%;
+    left: 60%;
   }
-}
+} 
