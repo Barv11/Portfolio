@@ -5,7 +5,7 @@ import {
   UilFileDownloadAlt,
   // UilWhatsapp,
 } from "@iconscout/react-unicons";
-// import CV from "../../assets/CV/Bryan CV.pdf";
+import CV from "../../assets/CV/Bryan CV.pdf";
 import logo from "./../../assets/desing.png";
 import s from "./Profile.module.css";
 
@@ -17,20 +17,20 @@ export default function Profile() {
           <a href="https://github.com/Barv11" target="BLANK">
             <UilGithub />
           </a>
-          {/* <a href="https://wa.link/6u9ttr" target="BLANK">
+          {/* <a href=" " target="BLANK">
             <UilWhatsapp />
           </a> */}
           <a href="https://www.linkedin.com/in/barv11/" target="BLANK">
             <UilLinkedin />
           </a>
-          {/* <a download="Bryan Ramos Vargas CV" href={CV}>
-            <UilFileDownloadAlt />
-            Resume
-          </a> */}
-          <a href="#contact">
+          <a download="Bryan Ramos Vargas CV" href={CV}>
             <UilFileDownloadAlt />
             Resume
           </a>
+          {/* <a href="#contact">
+            <UilFileDownloadAlt />
+            Resume
+          </a> */}
         </div>
       </div>
 
