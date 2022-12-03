@@ -1,54 +1,60 @@
 .container {
-    width: 100%;
-    height: 100vh;
-    background: var(--backgroundPage);
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: center;align-items: center;
-    align-content: center;
+  width: 100%;
+  height: 100vh;
+  background: var(--backgroundPage);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
 }
 
 .skill {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
 }
 
 .skill > h1 {
-    font-size: 1.5rem;
-    font-family: var(--fontGlobal);
-    padding: .8em;
-    white-space: nowrap;
+  font-size: 1.5rem;
+  font-family: var(--fontGlobal);
+  padding: 0.8em;
+  white-space: nowrap;
+}
+
+@media only screen and (min-height: 450px) {
+  .container {
+    height: 150vh;
+  }
 }
 
 @media only screen and (max-width: 1250px) {
-    .skill > h1 {
-        font-size: 1.4rem;
-    }
+  .skill > h1 {
+    font-size: 1.4rem;
+  }
 }
 
-
 @media only screen and (max-width: 920px) {
-    .skill > h1 {
-        font-size: 1.3rem;
-        padding: .5em;
-    } 
-    .container {
-        flex-flow: row wrap;
-    }
+  .skill > h1 {
+    font-size: 1.3rem;
+    padding: 0.5em;
+  }
+  .container {
+    flex-flow: row wrap;
+  }
 }
 
 @media only screen and (max-width: 720px) {
-    .skill > h1 {
-        font-size: 1rem;
-        padding: .3em;
-    } 
+  .skill > h1 {
+    font-size: 1rem;
+    padding: 0.3em;
+  }
 }
 
 @media only screen and (max-width: 450px) {
-    .skill > h1 {
-        font-size: .8rem;
-        padding: .3em;
-    } 
+  .skill > h1 {
+    font-size: 0.8rem;
+    padding: 0.3em;
+  }
 }

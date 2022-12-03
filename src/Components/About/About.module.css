@@ -44,12 +44,12 @@
 }
 
 .container > p > b {
-  color: rgb(93, 255, 255);
+  color: rgb(216, 194, 0);
   font-weight: 500;
 }
 
 .container > p > b:last-child {
-  color: rgb(33, 214, 88);
+  color: rgb(57, 202, 0);
   font-weight: 500;
 }
 
@@ -73,6 +73,12 @@
   outline: 2px solid #00ff55;
   box-shadow: 0 0 10px #00ff55;
   background-color: transparent;
+}
+
+@media only screen and (min-height: 450px) {
+  .container {
+    height: 150vh;
+  }
 }
 
 @media only screen and (max-width: 900px) {

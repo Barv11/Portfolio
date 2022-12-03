@@ -19,7 +19,7 @@ export default function Contact() {
         <div className={s.name}>
           <input type="email" name="email" id="correo" required />
           <UilAt />
-          <label htmlFor="name">Correo</label>
+          <label htmlFor="correo">Correo</label>
         </div>
         {state.errors.length ? (
           <div className={s.error}>
