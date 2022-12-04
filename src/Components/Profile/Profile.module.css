@@ -124,14 +124,14 @@
   padding: 3px;
   fill: var(--backgroundPage);
   fill: #7c2828;
-  width: 30px;
-  height: 30px;
+  width: 35px;
+  height: 35px;
 }
 
 .icons > a:hover > svg {
   padding: 3px;
   background-color: #7c2828;
-  fill: aliceblue;
+  fill: #ffffff;
   border-radius: 7px;
 }
 
@@ -161,7 +161,8 @@
 
   .icons > a > svg {
     width: 25px;
-    height: 25px;padding: 2px;
+    height: 25px;
+    padding: 2px;
   }
   .icons > a:hover > svg {
     padding: 2px;
@@ -169,11 +170,23 @@
 }
 
 @media only screen and (max-width: 450px) {
+  .container {
+    background-size: cover;
+    background-position: center top;
+  }
+
   .container > h2 {
     font-size: 1.5rem;
   }
 
   .container > p {
     font-size: 1rem;
+  }
+
+  .out {
+    color: white;
+    opacity: 0;
+    animation: enter 0.2s ease-in-out;
+    animation-fill-mode: forwards;
   }
 }
