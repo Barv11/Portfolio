@@ -75,7 +75,7 @@
   background-color: transparent;
 }
 
-@media only screen and (min-height: 450px) {
+@media only screen and (max-height: 450px) {
   .container {
     height: 150vh;
   }
