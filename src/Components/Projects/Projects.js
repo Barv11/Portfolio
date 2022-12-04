@@ -1,11 +1,13 @@
 import React, { useState } from "react";
 import s from "./Projects.module.css";
 import CardProyect from "./CardProyect/CardProyect";
-import { gamertech, pokeapp, appnotes, weatherapp } from "../../assets/proyects";
 import {
-  UilArrowLeft ,
-  UilArrowRight ,
-} from "@iconscout/react-unicons";
+  gamertech,
+  pokeapp,
+  appnotes,
+  weatherapp,
+} from "../../assets/proyects";
+import { UilArrowLeft, UilArrowRight } from "@iconscout/react-unicons";
 
 export default function Projects() {
   const [position, setPosition] = useState(0);
@@ -18,6 +20,7 @@ export default function Projects() {
         "- Tecnologías usadas: JavaScript, CSS, HTML, NodeJs, Express, React, Redux, Sequelize, Stripe, Boostrap, Nodemailer, JsonWebToken, Morgan",
       ],
       link: "https://e-commerce-sage-two.vercel.app/",
+      enabled: true,
     },
     {
       img: pokeapp,
@@ -27,6 +30,7 @@ export default function Projects() {
         "- Tecnologías usadas: JavaScript, CSS, HTML, NodeJs, Express, React, Redux, Sequelize, Morgan",
       ],
       link: "https://proyectpokemonbarv.vercel.app/",
+      enabled: true,
     },
     {
       img: appnotes,
@@ -36,6 +40,7 @@ export default function Projects() {
         "Tecnologías: React, Redux-toolkit.",
       ],
       link: "https://app-notes-three.vercel.app/",
+      enabled: true,
     },
     {
       img: weatherapp,
@@ -46,6 +51,7 @@ export default function Projects() {
         "Tecnologías: React, Local Storage.",
       ],
       link: "https://weather-app-barv11.vercel.app/",
+      enabled: true,
     },
   ];
 
@@ -67,9 +73,9 @@ export default function Projects() {
 
   return (
     <section id="projects" className={s.container}>
-      <UilArrowLeft  onClick={onClickPrev} />
+      <UilArrowLeft onClick={onClickPrev} />
       <CardProyect proyect={proyect[position]} key={proyect[position].name} />
-      <UilArrowRight  onClick={onClickNext} />
+      <UilArrowRight onClick={onClickNext} />
     </section>
   );
 }

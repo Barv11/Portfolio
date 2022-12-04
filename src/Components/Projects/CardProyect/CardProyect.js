@@ -10,14 +10,20 @@ export default function CardProyect({ proyect }) {
 
       <div className={s.modal}>
         <div className={s.submodal}>
-          <span>{name}</span>
-          {info.map((el, idx) => (
-            <p key={idx}>{el}</p>
-          ))}
-          <a href={link} target="BLANK">
-            Ir a la página
-            <UilLink />
-          </a>
+          {proyect.enabled ? (
+            <>
+              <span>{name}</span>
+              {info.map((el, idx) => (
+                <p key={idx}>{el}</p>
+              ))}
+              <a href={link} target="BLANK">
+                Ir a la página
+                <UilLink />
+              </a>
+            </>
+          ) : (
+            <span>El proyecto se encuentra en mantenimiento.</span>
+          )}
         </div>
       </div>
     </div>
